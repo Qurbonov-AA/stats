@@ -6,7 +6,7 @@ import (
 	"github.com/Qurbonov-AA/bank/v2/pkg/types"
 )
 
-func ExampleAvg_positive() {
+func ExampleAvg() {
 	payments := []types.Payment{
 		{
 			ID:       1,
