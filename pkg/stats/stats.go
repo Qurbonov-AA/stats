@@ -27,3 +27,16 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 
 	return sumByCategory
 }
+
+func TotalInCategory_empty(payments []types.Payment) types.Money {
+	sumByCategory := types.Money(0)
+	statusPayment := types.StatusFail
+
+	for _, i := range payments {
+		if i.Status != statusPayment {
+			sumByCategory += i.Amount
+		}
+	}
+
+	return sumByCategory
+}
